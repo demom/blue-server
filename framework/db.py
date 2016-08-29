@@ -2,6 +2,7 @@ import os
 import rethinkdb as r
 from rethinkdb.errors import RqlRuntimeError, RqlDriverError
 
+
 class Db:
 
 	RDB_HOST = 'localhost'
@@ -9,7 +10,6 @@ class Db:
 	PROJECT_DB = 'Aurora'
 	PROJECT_TABLE = 'Inventory'
 	connection = r.connect(RDB_HOST, RDB_PORT)
-
 
 	# Function is for cross-checking database and table exists
 	def Setup(self):
